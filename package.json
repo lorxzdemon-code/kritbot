@@ -1,0 +1,19 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node artifacts/api-server/build.mjs && node server.js",
+    "build": "node artifacts/api-server/build.mjs",
+    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'"
+  },
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
