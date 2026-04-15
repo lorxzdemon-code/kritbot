@@ -62,7 +62,7 @@ app.listen(PORT, "0.0.0.0", function () {
   console.log("กฤษดา Bot web server running on port " + PORT);
 
   process.env.PORT = "9001";
-  var distPath = path.join(__dirname, "artifacts/api-server/dist/index.mjs");
+  var distPath = path.join(__dirname, require("./artifacts/api-server/dist/index.mjs");
   import(distPath).catch(function (err) {
     console.error("Bot failed to start:", err.message);
   });
